@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnapToLet</title>
+  <link rel="icon" href="assets/image 4.png" type="image/png" />
+  <meta name="description" content="SnapToLet is reimagining Indian real-estate by making it smarter, simpler and more accessible to everyone." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Noto Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header
+       ======================================================================== -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="/" class="brand-link" aria-label="SnapToLet Home">
+        <img src="assets/image 4.png" alt="Logo Icon" class="brand-icon" width="42" height="42" />
+        <img src="assets/image 5.png" alt="SnapToLet" class="brand-wordmark" width="120" height="32" />
+      </a>
+      <button id="btn-header-generate" class="btn-pill-primary" type="button">
+        <span>Generate Signboard</span>
+        <span class="btn-pill-icon" aria-hidden="true">→</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         Hero Section
+         ====================================================================== -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1 class="hero-heading">Indian Real-Estate Reimagined</h1>
+          <p class="hero-paragraph">SnapToLet is reimagining Indian real-estate by making it smarter, simpler and more accessible to everyone. Print a free To-Let signboard in your language, snap it with the app and let your listing reach every smartphone across India.</p>
+          <div class="hero-actions">
+            <a href="#tolet-generator" class="btn-pill-primary">
+              <span>Generate Signboard</span>
+              <span class="btn-pill-icon" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visuals">
+          <div class="hero-visual-card">
+            <img src="assets/Your Free To-Let Signboard.png" alt="SnapToLet app preview on mobile device" class="hero-visual-img" width="300" height="300" fetchpriority="high" />
+          </div>
+          <div class="hero-visual-card">
+            <img src="assets/From Street to Smartphones.png" alt="SnapToLet app preview on mobile device" class="hero-visual-img" width="300" height="300" fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         How SnapToLet Works (Video Section)
+         ====================================================================== -->
+    <section class="video-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How SnapToLet Works</h2>
+          <p class="section-subtitle">See how to go from a physical sign to a verified digital listing in minutes.</p>
+        </div>
+        <div class="video-container">
+          <div class="video-card">
+            <iframe 
+              class="video-iframe"
+              src="https://www.youtube.com/embed/SU0vXY-bzC4" 
+              title="How SnapToLet Works" 
+              loading="lazy" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         Download Band
+         ====================================================================== -->
+    <section class="download-band">
+      <div class="container">
+        <h2 class="download-title">Download SnapToLet</h2>
+        <div class="store-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.snap.tolet&pcampaignid=web_share" target="_blank" rel="noopener noreferrer" class="store-badge-btn" aria-label="Download SnapToLet on Google Play">
+            <img src="assets/playstoreButton.png" alt="Google Play" class="store-badge-img" width="160" height="42" loading="lazy" />
+          </a>
+          <a href="https://apps.apple.com/in/app/snaptolet-india-home-rentals/id6757463782" target="_blank" rel="noopener noreferrer" class="store-badge-btn" aria-label="Download SnapToLet on the App Store">
+            <img src="assets/appstore.png" alt="Apple Store" class="store-badge-img" width="160" height="42" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         For Landlords / Tenants / Everyone (Carousel)
+         ====================================================================== -->
+    <section class="carousel-section">
+      <div class="container">
+        <!-- Role Indicator Tabs -->
+        <div class="role-tabs" role="tablist" aria-label="Target Audience Categories">
+          <button class="role-tab-btn active" role="tab" aria-selected="true" aria-controls="slide-landlords" id="tab-landlords" type="button">For Landlords</button>
+          <button class="role-tab-btn" role="tab" aria-selected="false" aria-controls="slide-tenants" id="tab-tenants" type="button">For Tenants</button>
+          <button class="role-tab-btn" role="tab" aria-selected="false" aria-controls="slide-everyone" id="tab-everyone" type="button">For Everyone</button>
+        </div>
+
+        <div class="carousel-wrapper">
+          <!-- Slide 1: For Landlords -->
+          <div class="carousel-slide active" id="slide-landlords" role="tabpanel" aria-labelledby="tab-landlords">
+            <div class="slide-content-grid">
+              <div class="character-card">
+                <img src="assets/Landlords.png" alt="Landlord Icon" class="character-img" width="260" height="260" loading="lazy" />
+                <h3 class="character-title">For Landlords</h3>
+              </div>
+              <div class="steps-grid">
+                <article class="step-card">
+                  <span class="step-badge">1</span>
+                  <h4 class="step-heading">Generate your free To-Let signboard</h4>
+                  <p class="step-description">Create a clean, bilingual To-Let signboard for each property using our free generator. Add your contact number on the To-Let signboard so tenants can easily reach you.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">2</span>
+                  <h4 class="step-heading">Place the signboard outside the property</h4>
+                  <p class="step-description">Hang the signboard directly in front of the property where it is clearly visible from the street.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">3</span>
+                  <h4 class="step-heading">Snap or Scan your signboard with the app</h4>
+                  <p class="step-description">Download the free SnapToLet app from Google Play or the App Store. Snap your signboard or Scan its QR code using the app to start listing the property.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">4</span>
+                  <h4 class="step-heading">Sign up and verify your account</h4>
+                  <p class="step-description">Sign up as a Landlord with the phone number shown on your To-Let signboard and complete OTP verification. Once verified, your property appears instantly in your Landlord account.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">5</span>
+                  <h4 class="step-heading">Add more details to boost your listing</h4>
+                  <p class="step-description">Upload photos and include key property details to help tenants decide quickly. Complete listings attract more interest and get rented faster.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">6</span>
+                  <h4 class="step-heading">Get more people to snap or scan your signboard</h4>
+                  <p class="step-description">Invite your family, friends, or neighbours to Snap or Scan your To-Let signboard using the SnapToLet app. More scans help speed up verification and improve your property listing’s visibility.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: For Tenants -->
+          <div class="carousel-slide" id="slide-tenants" role="tabpanel" aria-labelledby="tab-tenants">
+            <div class="slide-content-grid">
+              <div class="character-card">
+                <img src="assets/Tenants.png" alt="Tenant Icon" class="character-img" width="260" height="260" loading="lazy" />
+                <h3 class="character-title">For Tenants</h3>
+              </div>
+              <div class="steps-grid">
+                <article class="step-card">
+                  <span class="step-badge">1</span>
+                  <h4 class="step-heading">Download the SnapToLet app</h4>
+                  <p class="step-description">Get the free SnapToLet app from Google Play or the App Store to start finding available rental properties all across India.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">2</span>
+                  <h4 class="step-heading">Explore by location</h4>
+                  <p class="step-description">Tap Explore to discover verified listings in any area. You can also use your current location to find nearby properties.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">3</span>
+                  <h4 class="step-heading">Snap your signboard with the app or Scan the QR code</h4>
+                  <p class="step-description">Download the free SnapToLet app from Google Play or the App Store. Snap your signboard using the SnapToLet app or Scan its QR code using your phone's camera app to start listing your property.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">4</span>
+                  <h4 class="step-heading">Connect with Landlords and explore multiple options</h4>
+                  <p class="step-description">Compare options, talk to Landlords and visit the properties you like to find your next home.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">5</span>
+                  <h4 class="step-heading">Help improve the renting experience for everyone</h4>
+                  <p class="step-description">If you visited a property or spoke to a Landlord through SnapToLet, share quick feedback to help improve the renting experience for everyone.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">6</span>
+                  <h4 class="step-heading">Snap or Scan signboards to help the community</h4>
+                  <p class="step-description">Snap or Scan To-Let signboards whenever you spot them to help grow listings and strengthen the renting community.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: For Everyone -->
+          <div class="carousel-slide" id="slide-everyone" role="tabpanel" aria-labelledby="tab-everyone">
+            <div class="slide-content-grid">
+              <div class="character-card">
+                <img src="assets/Everyone Else.png" alt="Everyone Icon" class="character-img" width="260" height="260" loading="lazy" />
+                <h3 class="character-title">For Everyone</h3>
+              </div>
+              <div class="steps-grid">
+                <article class="step-card">
+                  <span class="step-badge">1</span>
+                  <h4 class="step-heading">Download the SnapToLet app</h4>
+                  <p class="step-description">Get the free SnapToLet app from Google Play or the App Store and become part of a growing movement to make renting faster, smarter and simpler across India.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">2</span>
+                  <h4 class="step-heading">Snap legitimate To-Let signboards outside vacant properties</h4>
+                  <p class="step-description">Whenever you spot a To-Let signboard, Snap or Scan it with the SnapToLet app. A few seconds of your time can help someone find their next home.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">3</span>
+                  <h4 class="step-heading">Snap all genuine To-Let signboards around you</h4>
+                  <p class="step-description">Don’t limit yourself to signboards created with the SnapToLet generator. Snap any authentic To-Let signboard outside a vacant property to help grow a trusted renting community across India.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">4</span>
+                  <h4 class="step-heading">Upload clear, accurate Snaps</h4>
+                  <p class="step-description">Before uploading your Snap, ensure all signboard details are clearly visible and easy to read. Retake the Snap if needed to help keep listings accurate for everyone.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">5</span>
+                  <h4 class="step-heading">Spread the word</h4>
+                  <p class="step-description">If you know someone renting out their property or looking for a new home, let them know about SnapToLet. Every signboard you Snap and every person you tell helps make renting simpler and more reliable for everyone.</p>
+                </article>
+                <article class="step-card">
+                  <span class="step-badge">6</span>
+                  <h4 class="step-heading">Be part of the real-estate revolution</h4>
+                  <p class="step-description">Every Snap helps make renting simpler, safer and more transparent for everyone. Together, we can modernize how India finds homes.</p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls -->
+        <div class="carousel-controls-bottom">
+          <button id="carousel-prev" class="carousel-nav-btn" type="button" aria-label="Previous Slide">←</button>
+          <button id="carousel-next" class="carousel-nav-btn" type="button" aria-label="Next Slide">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         The Hero Tool: To-Let Board Generator
+         ====================================================================== -->
+    <section id="tolet-generator" class="generator-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">To-Let Board Generator</h2>
+        </div>
+
+        <div class="generator-console">
+          <!-- Left: Input Controls Card -->
+          <div class="generator-form-card">
+            <div class="form-group">
+              <label for="gen-language" class="form-label">Language</label>
+              <select id="gen-language" class="form-select" name="language"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="gen-property" class="form-label">Property Type</label>
+              <select id="gen-property" class="form-select" name="propertyType"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="gen-floor" class="form-label">Floor</label>
+              <select id="gen-floor" class="form-select" name="floor"></select>
+            </div>
+
+            <div class="form-group">
+              <label for="gen-phone" class="form-label">Phone Number</label>
+              <input 
+                type="tel" 
+                id="gen-phone" 
+                class="form-input" 
+                name="phone" 
+                placeholder="Phone Number (10 digits)" 
+                maxlength="10" 
+                inputmode="numeric" 
+              />
+            </div>
+
+            <div class="generator-btn-group">
+              <button id="btn-generate-pdf" class="btn-generate" data-original-text="Generate PDF" type="button">Generate PDF</button>
+              <button id="btn-generate-jpg" class="btn-generate" data-original-text="Generate JPG" type="button">Generate JPG</button>
+              <button id="btn-generate-png" class="btn-generate" data-original-text="Generate PNG" type="button">Generate PNG</button>
+            </div>
+          </div>
+
+          <!-- Right: Live Signboard Preview Card -->
+          <div class="signboard-preview-container">
+            <div id="preview-board" class="signboard-card">
+              <div class="signboard-brand">
+                <img src="assets/image 4.png" alt="Home" class="signboard-icon" width="28" height="28" />
+                <img src="assets/image 5.png" alt="SnapToLet" class="signboard-wordmark" width="88" height="24" />
+              </div>
+
+              <div id="preview-tagline" class="signboard-tagline">
+                <span class="text-placeholder">Select language</span>
+              </div>
+
+              <div class="signboard-main-title">
+                <span class="text-black">TO-</span><span class="text-emerald">LET</span>
+              </div>
+
+              <div id="preview-qr-box" class="signboard-qr-box">
+                <div class="text-placeholder text-xs font-bold">QR</div>
+              </div>
+
+              <div class="signboard-details">
+                <div id="preview-property" class="signboard-property">
+                  <span class="text-placeholder">Property Type</span>
+                </div>
+                <div id="preview-floor" class="signboard-floor">
+                  <span class="text-placeholder">Floor</span>
+                </div>
+                <div id="preview-phone" class="signboard-phone">
+                  <span class="text-placeholder">+91 XXXXXXXXXX</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Socials -->
+        <div>
+          <div class="footer-brand-lockup">
+            <img src="assets/image 4.png" alt="Logo" class="footer-icon" width="36" height="36" loading="lazy" />
+            <img src="assets/image 5.png" alt="Logo" class="footer-wordmark" width="100" height="28" loading="lazy" />
+          </div>
+          <p class="footer-tagline">Social Real Estate</p>
+          <p class="footer-social-title">Follow Us On:</p>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/snaptolet/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Instagram">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+          <p class="footer-address">Bengaluru, Karnataka, <br/>India</p>
+        </div>
+
+        <!-- Col 2: Support Links -->
+        <div>
+          <h3 class="footer-col-title">Support</h3>
+          <ul class="footer-links-list">
+            <li><a href="mailto:help@snaptolet.com" class="footer-link">help@snaptolet.com</a></li>
+            <li><a href="terms.html" class="footer-link">Terms &amp; Conditions</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="app-privacy.html" class="footer-link">App Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: About Us -->
+        <div>
+          <h3 class="footer-col-title">About Us</h3>
+          <p class="footer-about-text">Hanging To-Let signboards outside vacant properties is part of India’s real estate tradition. SnapToLet brings this tradition into the AI age by uniting social participation and modern technology to make every rentable property discoverable across India.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 SnapToLet (OPC) Pvt. Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor Scripts -->
+  <script src="vendor/qrcode.min.js"></script>
+  <script src="vendor/jspdf.umd.min.js"></script>
+
+  <!-- Application Script -->
+  <script src="main.js"></script>
+</body>
+</html>
+
