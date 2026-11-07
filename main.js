@@ -11,7 +11,7 @@
   const CANVAS_WIDTH = 1240;
   const CANVAS_HEIGHT = 1754;
   const CENTER_X = CANVAS_WIDTH / 2;
-  const COLOR_EMERALD = '#10B981';
+  const COLOR_BRAND_GREEN = '#0F6B52';
   const COLOR_BLACK = '#000000';
   const COLOR_BORDER = '#E5E7EB';
   const COLOR_PLACEHOLDER = '#9CA3AF';
@@ -364,7 +364,7 @@
     }
     return text.trim().split(/\s+/).map((word, idx) => ({
       text: word,
-      color: idx === highlightIdx ? COLOR_EMERALD : COLOR_BLACK
+      color: idx === highlightIdx ? COLOR_BRAND_GREEN : COLOR_BLACK
     }));
   }
 
@@ -395,7 +395,7 @@
     // Prominent Brand Name Text: Snap (Green) + ToLet (Black)
     setFont(ctx, 800, 52);
     drawCenteredParts(ctx, CENTER_X, 146, [
-      { text: "Snap", color: COLOR_EMERALD },
+      { text: "Snap", color: COLOR_BRAND_GREEN },
       { text: "ToLet", color: COLOR_BLACK }
     ]);
 
@@ -410,7 +410,7 @@
     setFont(ctx, 800, 248);
     drawCenteredParts(ctx, CENTER_X, 530, [
       { text: "TO-", color: COLOR_BLACK },
-      { text: "LET", color: COLOR_EMERALD }
+      { text: "LET", color: COLOR_BRAND_GREEN }
     ]);
 
     // 4. QR Code Box
@@ -450,7 +450,7 @@
     const phoneVal = phoneInput.value.trim();
     const phoneParts = [
       { text: "+91 ", color: COLOR_BLACK },
-      { text: phoneVal || "XXXXXXXXXX", color: phoneVal ? COLOR_EMERALD : COLOR_PLACEHOLDER }
+      { text: phoneVal || "XXXXXXXXXX", color: phoneVal ? COLOR_BRAND_GREEN : COLOR_PLACEHOLDER }
     ];
     const phoneFs = fitFontSize(ctx, phoneParts, 800, 78, 58, 1040);
     setFont(ctx, 800, phoneFs);
@@ -458,7 +458,7 @@
 
     // 8. Brand Name & Website Footer on Downloadable Signboard
     setFont(ctx, 700, 32);
-    ctx.fillStyle = COLOR_EMERALD;
+    ctx.fillStyle = COLOR_BRAND_GREEN;
     const brandFooterText = "SnapToLet  •  snaptolet.com  •  Download SnapToLet App";
     const brandFooterW = ctx.measureText(brandFooterText).width;
     ctx.fillText(brandFooterText, CENTER_X - brandFooterW / 2, 1645);
