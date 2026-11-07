@@ -1,5 +1,6 @@
 /* ==========================================================================
    SnapToLet - Wise-Inspired Design System (v3 Single-Green Architecture)
+   Fully Optimized for Desktop, Tablet, and Mobile
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans:wght@400;600;700&display=swap');
@@ -56,6 +57,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -65,6 +67,7 @@ body {
   min-height: 100vh;
   background-color: var(--bg);
   color: var(--ink);
+  width: 100%;
 }
 
 img, iframe {
@@ -75,12 +78,14 @@ img, iframe {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button, input, select {
   font: inherit;
   border: none;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Accessible Focus States */
@@ -102,20 +107,20 @@ button, input, select {
   text-align: center;
   max-width: 720px;
   margin-inline: auto;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 }
 
 .section-title {
-  font-size: clamp(2rem, 3.75vw, 3rem);
+  font-size: clamp(1.85rem, 3.75vw, 3rem);
   font-weight: 800;
-  line-height: 1.12;
+  line-height: 1.15;
   letter-spacing: -0.025em;
   color: var(--ink);
   margin-bottom: 0.85rem;
 }
 
 .section-subtitle {
-  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
   color: var(--muted);
   line-height: 1.55;
 }
@@ -143,6 +148,7 @@ button, input, select {
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  gap: 12px;
 }
 
 .brand-link {
@@ -150,6 +156,7 @@ button, input, select {
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .brand-icon {
@@ -177,6 +184,8 @@ button, input, select {
   cursor: pointer;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
   box-shadow: 0 4px 14px rgba(159, 232, 112, 0.4);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .btn-pill-primary:hover {
@@ -200,6 +209,7 @@ button, input, select {
   font-size: 0.85rem;
   font-weight: 800;
   transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .btn-pill-primary:hover .btn-pill-icon {
@@ -231,7 +241,7 @@ button, input, select {
    Hero Section (Background: --bg)
    ========================================================================== */
 .hero-section {
-  padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  padding-block: clamp(3rem, 7vw, 6.5rem);
   background-color: var(--bg);
   position: relative;
   overflow: hidden;
@@ -247,19 +257,19 @@ button, input, select {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .hero-heading {
-  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
   font-weight: 800;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.035em;
   color: var(--ink);
 }
 
 .hero-paragraph {
-  font-size: clamp(1.1rem, 1.6vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
   color: var(--muted);
   line-height: 1.6;
   max-width: 52ch;
@@ -312,7 +322,7 @@ button, input, select {
 }
 
 .hero-visual-img {
-  height: clamp(220px, 28vw, 320px);
+  height: clamp(200px, 28vw, 320px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 12px 24px rgba(11, 46, 37, 0.1));
@@ -322,7 +332,7 @@ button, input, select {
    How SnapToLet Works (Video Section - Background: --surface)
    ========================================================================== */
 .video-section {
-  padding-block: clamp(4rem, 8vw, 6.5rem);
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
   background-color: var(--surface);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -338,7 +348,7 @@ button, input, select {
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   background-color: #000000;
-  border-radius: 28px;
+  border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--line);
@@ -358,16 +368,16 @@ button, input, select {
 .download-band {
   background-color: var(--green);
   color: #FFFFFF;
-  padding-block: clamp(3.5rem, 6vw, 5rem);
+  padding-block: clamp(3rem, 6vw, 4.5rem);
   text-align: center;
   position: relative;
 }
 
 .download-title {
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-size: clamp(1.85rem, 3.5vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.02em;
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
   color: #FFFFFF;
 }
 
@@ -386,8 +396,8 @@ button, input, select {
   background: rgba(255, 255, 255, 0.1);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-pill);
-  padding: 8px 24px;
-  min-height: 56px;
+  padding: 8px 22px;
+  min-height: 52px;
   transition: all var(--transition-fast);
   cursor: pointer;
 }
@@ -400,7 +410,7 @@ button, input, select {
 }
 
 .store-badge-img {
-  height: 40px;
+  height: 38px;
   width: auto;
   object-fit: contain;
 }
@@ -409,18 +419,18 @@ button, input, select {
    Tabs & Steps Carousel (Background: --bg)
    ========================================================================== */
 .carousel-section {
-  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  padding-block: clamp(3.5rem, 8vw, 7rem);
   background-color: var(--bg);
   position: relative;
 }
 
-/* Role Selector Tabs */
+/* Role Selector Tabs (Wise-style pill switcher, horizontally scrollable on mobile) */
 .role-tabs {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
   flex-wrap: wrap;
 }
 
@@ -435,6 +445,8 @@ button, input, select {
   transition: all var(--transition-fast);
   border: 1.5px solid var(--line);
   box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  min-height: 48px;
 }
 
 .role-tab-btn:hover {
@@ -474,7 +486,7 @@ button, input, select {
 .slide-content-grid {
   display: grid;
   grid-template-columns: 320px 1fr;
-  gap: clamp(2rem, 4vw, 3.5rem);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
   align-items: start;
 }
 
@@ -562,15 +574,15 @@ button, input, select {
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  margin-top: 3rem;
+  margin-top: 2.75rem;
 }
 
 .carousel-nav-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-pill);
   background: var(--surface);
   color: var(--ink);
@@ -594,7 +606,7 @@ button, input, select {
    The Hero Tool: To-Let Board Generator (Background: --green, NO GRADIENT)
    ========================================================================== */
 .generator-section {
-  padding-block: clamp(4.5rem, 8vw, 7.5rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
   background-color: var(--green);  /* Solid Flat Green - Strict No Gradients Rule */
   color: #FFFFFF;
   position: relative;
@@ -641,7 +653,7 @@ button, input, select {
   padding: 12px 16px;
   border: 1.5px solid var(--line);
   border-radius: var(--radius-md);
-  font-size: 0.95rem;
+  font-size: 16px; /* 16px prevents iOS automatic zoom on focus */
   background-color: var(--surface);
   color: var(--ink);
   transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
@@ -671,6 +683,10 @@ button, input, select {
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
   text-align: center;
   box-shadow: 0 2px 8px rgba(11, 46, 37, 0.1);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-generate:hover:not(:disabled) {
@@ -694,10 +710,12 @@ button, input, select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .signboard-card {
   width: 320px;
+  max-width: 100%;
   min-height: 440px;
   background-color: var(--surface);
   border-radius: var(--radius-lg);
@@ -820,7 +838,7 @@ button, input, select {
 .footer {
   background-color: var(--surface);
   color: var(--ink);
-  padding-top: clamp(4rem, 6vw, 6rem);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
   padding-bottom: 2.5rem;
   border-top: 1px solid var(--line);
 }
@@ -875,8 +893,8 @@ button, input, select {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 38px;
-  height: 38px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-pill);
   background: var(--bg);
   border: 1px solid var(--line);
@@ -915,6 +933,8 @@ button, input, select {
   color: var(--muted);
   font-size: 0.95rem;
   transition: color var(--transition-fast);
+  display: inline-block;
+  padding-block: 4px;
 }
 
 .footer-link:hover {
@@ -936,7 +956,7 @@ button, input, select {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints: Tablet & Mobile Ergonomics
    ========================================================================== */
 
 /* Tablet (max-width: 1024px) */
@@ -974,60 +994,271 @@ button, input, select {
   }
 }
 
-/* Mobile (max-width: 768px) */
+/* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
+  .container {
+    padding-inline: 18px;
+  }
+
+  /* Compact Sticky Header */
   .header-container {
-    height: 70px;
+    height: 64px;
+    gap: 8px;
+  }
+
+  .brand-icon {
+    height: 32px;
+  }
+
+  .brand-wordmark {
+    height: 22px;
   }
 
   .btn-pill-primary {
-    padding: 10px 18px;
-    font-size: 0.9rem;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+
+  .btn-pill-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.75rem;
+  }
+
+  /* Hero Mobile */
+  .hero-section {
+    padding-block: 2.5rem 2rem;
+  }
+
+  .hero-heading {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  .hero-paragraph {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn-pill-primary {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
   }
 
   .hero-visuals {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: row;
+    gap: 0.75rem;
     padding: 1rem;
+    border-radius: var(--radius-lg);
   }
 
   .hero-visual-card {
-    width: 100%;
-    max-width: 320px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-visual-img {
-    height: 220px;
+    height: clamp(140px, 36vw, 190px);
+  }
+
+  /* Video Mobile */
+  .video-section {
+    padding-block: 2.75rem;
+  }
+
+  .video-card {
+    border-radius: 18px;
+  }
+
+  /* Download Band Mobile */
+  .download-band {
+    padding-block: 2.75rem 2.25rem;
+  }
+
+  .store-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
     margin-inline: auto;
+    gap: 10px;
+  }
+
+  .store-badge-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 18px;
+  }
+
+  /* Tabs & Steps Mobile - Horizontally Scrollable Pills (Section 5) */
+  .carousel-section {
+    padding-block: 3rem;
+  }
+
+  .role-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-inline: 18px;
+    margin-inline: -18px;
+    padding-bottom: 8px;
+    margin-bottom: 1.75rem;
+    gap: 8px;
+  }
+
+  .role-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .role-tab-btn {
+    flex-shrink: 0;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+
+  /* Compact persona card on mobile */
+  .character-card {
+    position: static;
+    max-width: 100%;
+    padding: 1.25rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: left;
+  }
+
+  .character-img {
+    width: 72px;
+    height: 72px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .character-title {
+    font-size: 1.35rem;
+    margin: 0;
   }
 
   .steps-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .footer-grid {
+  .step-card {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+
+  .step-heading {
+    font-size: 1.05rem;
+  }
+
+  .step-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Generator Mobile */
+  .generator-section {
+    padding-block: 3rem;
+  }
+
+  .generator-console {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .generator-form-card {
+    padding: 1.5rem 1.25rem;
+    border-radius: var(--radius-lg);
   }
 
   .generator-btn-group {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 1.5rem;
   }
-}
 
-/* Mobile Small (375px) */
-@media (max-width: 375px) {
-  .container {
-    padding-inline: 16px;
+  .btn-generate {
+    width: 100%;
+    min-height: 48px;
+    font-size: 0.95rem;
   }
 
   .signboard-card {
-    width: 290px;
-    padding: 1.25rem 0.75rem;
+    width: 100%;
+    max-width: 320px;
+    padding: 1.25rem 1rem;
   }
 
   .signboard-main-title {
     font-size: 52px;
+  }
+
+  /* Footer Mobile */
+  .footer {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+/* Small Mobile Screens (max-width: 375px) */
+@media (max-width: 375px) {
+  .container {
+    padding-inline: 14px;
+  }
+
+  .brand-wordmark {
+    display: none; /* Show icon only on ultra-compact 320-360px headers so CTA button never wraps */
+  }
+
+  .header-container {
+    height: 60px;
+  }
+
+  .btn-pill-primary {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero-visuals {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-visual-img {
+    height: 150px;
+  }
+
+  .signboard-card {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .signboard-main-title {
+    font-size: 46px;
+  }
+
+  .signboard-tagline {
+    font-size: 14px;
   }
 }
 
