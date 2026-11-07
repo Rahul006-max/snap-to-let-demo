@@ -382,21 +382,22 @@
     ctx.imageSmoothingEnabled = true;
     ctx.imageSmoothingQuality = "high";
 
-    // 1. Logos
-    const [homeImg, wordmarkImg, qrImg] = await Promise.all([
+    // 1. Logos & Brand Name Lockup
+    const [homeImg, qrImg] = await Promise.all([
       loadImage(IMG_HOME_BASE64),
-      loadImage(IMG_WORDMARK_BASE64),
       qrDataUrl ? loadImage(qrDataUrl) : Promise.resolve(null)
     ]);
 
-    const iconSize = 88;
-    const iconY = 34;
+    const iconSize = 92;
+    const iconY = 40;
     ctx.drawImage(homeImg, CENTER_X - iconSize / 2, iconY, iconSize, iconSize);
 
-    const logoW = 240;
-    const logoH = (wordmarkImg.height / wordmarkImg.width) * logoW;
-    const logoY = 140;
-    ctx.drawImage(wordmarkImg, CENTER_X - logoW / 2, logoY, logoW, logoH);
+    // Prominent Brand Name Text: Snap (Black) + ToLet (Emerald)
+    setFont(ctx, 800, 52);
+    drawCenteredParts(ctx, CENTER_X, 146, [
+      { text: "Snap", color: COLOR_BLACK },
+      { text: "ToLet", color: COLOR_EMERALD }
+    ]);
 
     // 2. Bilingual Tagline
     const langObj = LANGUAGES.find(l => l.value === langSelect.value);

@@ -699,6 +699,17 @@ button, input, select {
   height: 28px;
 }
 
+.signboard-brand-name {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-top: 3px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .signboard-wordmark {
   width: 88px;
   height: auto;

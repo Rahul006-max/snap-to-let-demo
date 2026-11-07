@@ -13,3 +13,4 @@ A visual and UX redesign of **snaptolet.com**, inspired by the design principles
 - Semantic HTML5, Modern CSS (Custom Properties / Design Tokens), Vanilla JavaScript
 - Vendor Libraries: `qrcode.min.js`, `jspdf.umd.min.js`
 - Mobile-first, fully responsive at 375px, 768px, and 1440px.
+
