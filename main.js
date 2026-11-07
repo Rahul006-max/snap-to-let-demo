@@ -392,11 +392,11 @@
     const iconY = 40;
     ctx.drawImage(homeImg, CENTER_X - iconSize / 2, iconY, iconSize, iconSize);
 
-    // Prominent Brand Name Text: Snap (Black) + ToLet (Emerald)
+    // Prominent Brand Name Text: Snap (Green) + ToLet (Black)
     setFont(ctx, 800, 52);
     drawCenteredParts(ctx, CENTER_X, 146, [
-      { text: "Snap", color: COLOR_BLACK },
-      { text: "ToLet", color: COLOR_EMERALD }
+      { text: "Snap", color: COLOR_EMERALD },
+      { text: "ToLet", color: COLOR_BLACK }
     ]);
 
     // 2. Bilingual Tagline
